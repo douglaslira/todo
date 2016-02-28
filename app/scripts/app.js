@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('ToDoApp', ['ngAnimate', 'ngRoute', 'translate'])
+  .module('ToDoApp', ['ngRoute', 'translate'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

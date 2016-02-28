@@ -1,0 +1,55 @@
+<div class="todo-container" ng-init="initToDoListController()">
+    <alert-msg settings="todoViewControl.messageControl"></alert-msg>
+    <section class="post-container">
+        <div class="post-content">
+            <input type="text"
+                   class="form-control"
+                   placeholder="Add your task here"
+                   ng-enter="add(todoViewControl.currTask)"
+                   ng-model="todoViewControl.currTask.description">
+        </div>
+        <div class="post-footer">
+            <button type="button"
+                    class="btn btn-primary"
+                    ng-click="add(todoViewControl.currTask)">
+                {{::'ADD' | soGoToLang}}
+            </button>
+        </div>
+    </section>
+    <section class="list-container">
+        <header class="tasks-list-header">
+            <button type="button"
+                    class="btn clear-button"
+                    ng-disabled="!todoViewControl.tasks.length"
+                    ng-click="clearCompleted()">{{::'CLEAR_COMPLETED' | soGoToLang}}
+            </button>
+            <button type="button"
+                    class="btn clear-button"
+                    ng-disabled="!todoViewControl.tasks.length"
+                    ng-click="archive()">{{::'ARCHIVE' | soGoToLang}}
+            </button>
+        </header>
+        <ul class="list-group" ng-repeat="task in todoViewControl.tasks">
+            <li class="list-group-item">
+                <button ng-disabled="task.editing" class="btn clear-button glyphicon glyphicon-ok task-selector" ng-click="toggleTask(task)"></button>
+                <div class="task-description" ng-class="{'done': task.done}">
+                    <section class="class-editing" ng-if="task.editing">
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Add your task here"
+                               ng-enter="add(todoViewControl.currTask)"
+                               ng-model="task.description">
+                    </section>
+                    <span ng-hide="task.editing">{{task.description}}</span>
+                </div>
+                <div class="btn-group" role="group">
+                    <button ng-if="!task.done" class="btn clear-button glyphicon"
+                            ng-class="{'glyphicon-pencil': !task.editing, 'glyphicon-ok': task.editing}"
+                            ng-click="task.editing = !task.editing">
+                        </button>
+                    <button class="btn clear-button glyphicon glyphicon-trash" ng-click="delete($index)"></button>
+                </div>
+            </li>
+        </ul>
+    </section>
+</div>

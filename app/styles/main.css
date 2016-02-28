@@ -1,0 +1,114 @@
+.card {
+  background-color: #fff;
+  margin-top: 25px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-shadow: 1px 1px 4px 0px #ddd;
+  border-radius: 2px;
+}
+.list-group {
+  margin-bottom: -1px !important;
+}
+.list-group .list-group-item {
+  border-radius: 0 !important;
+}
+body,
+button {
+  outline: none !important;
+}
+body {
+  background-color: #e9eaed;
+}
+.app-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.clear-button {
+  background-color: transparent;
+  color: #008080 !important;
+  font-weight: 500;
+}
+.clear-button:hover {
+  color: #4ca6a6;
+}
+.message-container {
+  width: 280px;
+  margin: 5px auto;
+  min-height: 84px;
+  background-color: #fff;
+  position: absolute;
+  padding: 8px;
+  right: 0;
+  top: 0;
+  left: 0;
+  border: 1px solid #ddd;
+  box-shadow: 1px 1px 4px 0px #ddd;
+}
+.message-container .message-content .title {
+  text-align: center;
+  font-size: 1.4rem;
+}
+.message-container .message-content .content {
+  font-size: 1.5rem;
+  margin: 12px 0;
+}
+.message-container .message-footer button {
+  float: right;
+}
+.todo-container {
+  padding: 8px;
+}
+.todo-container .post-container {
+  background-color: #fff;
+  margin-top: 25px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-shadow: 1px 1px 4px 0px #ddd;
+  border-radius: 2px;
+}
+.todo-container .post-container .post-content {
+  padding: 8px;
+}
+.todo-container .post-container .post-footer {
+  padding: 0 8px;
+  height: 42px;
+}
+.todo-container .post-container .post-footer button {
+  float: right;
+}
+.todo-container .list-container {
+  background-color: #fff;
+  margin-top: 25px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-shadow: 1px 1px 4px 0px #ddd;
+  border-radius: 2px;
+}
+.todo-container .list-container .tasks-list-header {
+  height: 52px;
+  padding: 8px;
+}
+.todo-container .list-container .list-group .list-group-item .task-selector {
+  left: 8px;
+  top: 3px;
+  position: absolute;
+}
+.todo-container .list-container .list-group .list-group-item .task-description {
+  margin: 0 76px 0 40px;
+}
+.todo-container .list-container .list-group .list-group-item .btn-group {
+  position: absolute;
+  right: 0px;
+  top: 3px;
+}
+.todo-container .done {
+  text-decoration: line-through;
+}
+@media screen and (min-width: 768px) {
+  .todo-container {
+    width: 700px;
+    margin: 0 auto;
+  }
+}
